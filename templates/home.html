@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<!---->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+</head>
+<body>
+<!-- Start container -->
+<div class="container">
+    <!-- Start main -->
+    <div class="main">
+        <!-- Website title -->
+            <div class="title">
+                <h1>Predicting the numbers of insects infecting guava trees</h1>
+            </div>
+        <!-- End Website title -->
+        <!-- start left side -->
+        <div class="left-side">
+            <!-- Start input -->
+            <div class="input">
+            <form action="{{ url_for('predict')}}"method="post">
+                <input type="text" name="maximum_temprature"         placeholder="Maximum temprature °c"            required="required" /><br>
+                <input type="text" name="minimum_temprature"         placeholder="Minimum temperature °c"           required="required" /><br>
+                <input type="text" name="maximum_dew"                placeholder="Maximum dew °c"                   required="required" /><br>
+                <input type="text" name="minimum_dew"                placeholder="Minimum dew °c"                   required="required" /><br>
+                <input type="text" name="maximum_humidity"           placeholder="Maximum humidity %"               required="required" /><br>
+                <input type="text" name="minimum_humidity"           placeholder="Minimum humidity %"               required="required" /><br>
+                <input type="text" name="maximum_sea_level_pressure" placeholder="Maximum sea level pressure (hPa)" required="required" /><br>
+                <input type="text" name="minimum_sea_level_pressure" placeholder="Minimum sea level pressure (hPa)" required="required" /><br>
+                <input type="text" name="maximum_visibility"         placeholder="Maximum visibility (km)"          required="required" /><br>
+                <input type="text" name="minimum_visibility"         placeholder="Minimum visibility (km)"          required="required" /><br>
+                <input type="text" name="maximum_wind_speed"         placeholder="Maximum wind speed (km/h)"        required="required" /><br>
+                <input type="text" name="minimum_wind_speed"         placeholder="Minimum wind speed (km/h)"        required="required" /><br>
+                <select name="weather">
+                    <option selected value="1">sunny</option>
+                    <option value="2">rainy</option>
+                    <option value="3">foggy</option>
+                </select>
+                <button type="submit" class="btn">Predict</button>
+            </form>
+            <br>
+            <br>
+            </div>
+            <!-- End input -->
+        </div>
+        <!-- End left side -->
+    <!-- End main -->
+</div>
+
+<br>
+<br>
+
+<textarea style="resize:none">{{prediction_text}}</textarea>
+    
+<!-- End container -->
+</body>
+</html>
