@@ -6,7 +6,7 @@ The aim was to build a web application deployed on AWS EC2 instance to predict t
 
 ![alt text](https://github.com/mhmod2222/multi_predict/blob/main/aws_preview.png?raw=true)
 
-The web application is based on python and flask. 
+The web application is based on python and flask, and was containerized on docker image besides the deployment on AWS.
 
 The input features to the application comprise weather information available to people daily.
 
