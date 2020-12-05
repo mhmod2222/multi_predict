@@ -1,0 +1,16 @@
+how to run docker?
+
+first cd to project directory
+
+
+second build the image
+--> docker build -t farming .
+
+third list all docker images available
+--> docker images
+
+fourth stop all running containers
+--> docker stop $(docker ps -aq)
+
+fifth run the image
+--> docker run -p 8080:8080 farming
